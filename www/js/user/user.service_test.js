@@ -2,7 +2,8 @@ describe('User', function(){
 
   var User,
       fb,
-      $firebase
+      $firebase,
+      $q
 
   beforeEach(function(){
     $firebase = {
@@ -29,18 +30,19 @@ describe('User', function(){
 
   });
 
-  beforeEach(inject(function (_User_, _fb_, _$firebase_){
+  beforeEach(inject(function (_User_, _fb_, _$firebase_, _$q_){
     User = _User_;
+    $q = _$q_;
   }))
 
   it('findByAuth throws a typeerror if not provided a string', function(){
-    var obj = {};
-    var str = 'google'
-    User.findByAuth.bind(this, obj).should.Throw()
-    User.findByAuth.bind(this, str).should.not.Throw()
+    var obj = {
+      google: {}
+    };
+    var str = 'google';
+    User.findByAuth.bind(this, obj, obj).should.Throw()
+    User.findByAuth.bind(this, str, obj).should.not.Throw()
   })
-
-
 
 
 })

@@ -3,11 +3,13 @@ describe('Ctrl: Login', function(){
   var LoginCtrl,
       Auth,
       User,
-      $rootScope
+      $rootScope,
+      $q
 
   beforeEach(module('ananasTest'))
 
-  beforeEach(inject(function ($controller, $q, _$rootScope_){
+  beforeEach(inject(function ($controller, _$q_, _$rootScope_){
+    $q = _$q_;
     $rootScope = _$rootScope_;
     Auth = {
       $authWithOAuthPopup: sinon.stub().returns($q(function(resolve, reject){
