@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="css/ionic.app.css" rel="stylesheet">   
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+  
+    <!-- bower:js -->
+    <script src="lib/bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="lib/bower_components/angular/angular.js"></script>
+    <script src="lib/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="lib/bower_components/firebase/firebase.js"></script>
+    <script src="lib/bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="lib/bower_components/jdataview/dist/browser/jdataview.js"></script>
+    <script src="lib/bower_components/bacon/dist/Bacon.js"></script>
+    <!-- endbower -->
+
+    <!-- vendor:js -->
+    <script src="lib/vendor/gify/gify.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:js --> 
+    <script src="lib/templates/templates.js"></script> 
+    <script src="js/app.js"></script> 
+    <script src="js/user/user.service.js"></script> 
+    <script src="js/rendition/rendition.service.js"></script> 
+    <script src="js/play/play.helpers.service.js"></script> 
+    <script src="js/play/play.controller.js"></script> 
+    <script src="js/login/login.controller.js"></script> 
+    <script src="js/home/home.controller.js"></script> 
+    <script src="js/game/game.service.js"></script> 
+    <script src="js/components/fb.js"></script> 
+    <script src="js/auth/auth.js"></script> 
+    <!-- endinject -->
+     
+  </head>
+  <body ng-app="ananas">
+  <div ui-view=''></div>
+  </body>
+</html>
+
